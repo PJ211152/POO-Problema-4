@@ -41,6 +41,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lst_lista = new System.Windows.Forms.ListBox();
+            this.btn_LimpiarLista = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_Calcular
@@ -158,11 +159,22 @@
             this.lst_lista.Size = new System.Drawing.Size(124, 199);
             this.lst_lista.TabIndex = 13;
             // 
+            // btn_LimpiarLista
+            // 
+            this.btn_LimpiarLista.Location = new System.Drawing.Point(62, 304);
+            this.btn_LimpiarLista.Name = "btn_LimpiarLista";
+            this.btn_LimpiarLista.Size = new System.Drawing.Size(75, 23);
+            this.btn_LimpiarLista.TabIndex = 14;
+            this.btn_LimpiarLista.Text = "Limpiar";
+            this.btn_LimpiarLista.UseVisualStyleBackColor = true;
+            this.btn_LimpiarLista.Click += new System.EventHandler(this.btn_LimpiarLista_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 355);
+            this.Controls.Add(this.btn_LimpiarLista);
             this.Controls.Add(this.lst_lista);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -199,6 +211,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListBox lst_lista;
+        private System.Windows.Forms.Button btn_LimpiarLista;
     }
 }
 

@@ -134,5 +134,10 @@ namespace POO_Problema_4
         {
 
         }
+
+        private void btn_LimpiarLista_Click(object sender, EventArgs e)
+        {
+            lst_lista.Items.Clear();
+        }
     }
 }
