@@ -22,19 +22,18 @@ namespace POO_Problema_4
 
         }
 
-        private void txt_arreglo_TextChanged(object sender, EventArgs e)
+        private void OnKeyDownHandler(object sender, KeyEventArgs kea)
         {
-
-        }
-
-        private void txt_arreglo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((int)e.KeyChar == (int)Keys.Enter)
+            if (kea.KeyCode.Equals(Keys.Return))
             {
                 lst_lista.Items.Add(txt_arreglo.Text);
                 txt_arreglo.Clear();
                 txt_arreglo.Focus();
             }
+        }
+
+        private void txt_arreglo_TextChanged(object sender, EventArgs e)
+        {
 
         }
 
@@ -55,7 +54,7 @@ namespace POO_Problema_4
 
             try
             {
-                if (txt_ParesNeg.Text.Length != 0)
+                if (lst_lista.Items.Count != 0)
                 {
                     for (int i = 0; i < lst_lista.Items.Count; i++)
                     {
@@ -77,7 +76,7 @@ namespace POO_Problema_4
 
                 }
 
-                if (txt_PorcentajeCeros.Text.Length != 0)
+                if (lst_lista.Items.Count != 0)
                 {
                     for (int i = 0; i < lst_lista.Items.Count; i++)
                     {
@@ -93,7 +92,7 @@ namespace POO_Problema_4
 
                 }
 
-                if (txt_ImparesPositivos.Text.Length != 0)
+                if (lst_lista.Items.Count != 0)
                 {
                     for (int i = 0; i < lst_lista.Items.Count; i++)
                     {
@@ -109,7 +108,7 @@ namespace POO_Problema_4
                     txt_ImparesPositivos.Text = prom.ToString();
                 }
 
-                if (txt_MayorParPos.Text.Length != 0)
+                if (lst_lista.Items.Count != 0)
                 {
                     int mayor = 0;
                     for (int i = 0; i < lst_lista.Items.Count; i++)
@@ -129,6 +128,11 @@ namespace POO_Problema_4
             {
                 MessageBox.Show("Ingrese caracteres validos");
             }
+        }
+
+        private void txt_PorcentajeCeros_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

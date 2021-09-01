@@ -78,6 +78,7 @@
             this.txt_arreglo.Size = new System.Drawing.Size(100, 20);
             this.txt_arreglo.TabIndex = 3;
             this.txt_arreglo.TextChanged += new System.EventHandler(this.txt_arreglo_TextChanged);
+            this.txt_arreglo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OnKeyDownHandler);
             // 
             // txt_MayorParPos
             // 
@@ -102,6 +103,7 @@
             this.txt_PorcentajeCeros.ReadOnly = true;
             this.txt_PorcentajeCeros.Size = new System.Drawing.Size(100, 20);
             this.txt_PorcentajeCeros.TabIndex = 7;
+            this.txt_PorcentajeCeros.TextChanged += new System.EventHandler(this.txt_PorcentajeCeros_TextChanged);
             // 
             // label1
             // 
