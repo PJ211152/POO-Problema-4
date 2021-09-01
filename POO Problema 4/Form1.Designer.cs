@@ -32,8 +32,8 @@
             this.lbl_Varreglo = new System.Windows.Forms.Label();
             this.txt_ParesNeg = new System.Windows.Forms.TextBox();
             this.txt_arreglo = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.txt_ = new System.Windows.Forms.TextBox();
+            this.txt_MayorParPos = new System.Windows.Forms.TextBox();
+            this.txt_ImparesPositivos = new System.Windows.Forms.TextBox();
             this.txt_PorcentajeCeros = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,6 +51,7 @@
             this.btn_Calcular.TabIndex = 0;
             this.btn_Calcular.Text = "Calcular";
             this.btn_Calcular.UseVisualStyleBackColor = true;
+            this.btn_Calcular.Click += new System.EventHandler(this.btn_Calcular_Click);
             // 
             // lbl_Varreglo
             // 
@@ -76,22 +77,23 @@
             this.txt_arreglo.Name = "txt_arreglo";
             this.txt_arreglo.Size = new System.Drawing.Size(100, 20);
             this.txt_arreglo.TabIndex = 3;
+            this.txt_arreglo.TextChanged += new System.EventHandler(this.txt_arreglo_TextChanged);
             // 
-            // textBox4
+            // txt_MayorParPos
             // 
-            this.textBox4.Location = new System.Drawing.Point(392, 214);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 5;
+            this.txt_MayorParPos.Location = new System.Drawing.Point(392, 214);
+            this.txt_MayorParPos.Name = "txt_MayorParPos";
+            this.txt_MayorParPos.ReadOnly = true;
+            this.txt_MayorParPos.Size = new System.Drawing.Size(100, 20);
+            this.txt_MayorParPos.TabIndex = 5;
             // 
-            // txt_
+            // txt_ImparesPositivos
             // 
-            this.txt_.Location = new System.Drawing.Point(392, 188);
-            this.txt_.Name = "txt_";
-            this.txt_.ReadOnly = true;
-            this.txt_.Size = new System.Drawing.Size(100, 20);
-            this.txt_.TabIndex = 6;
+            this.txt_ImparesPositivos.Location = new System.Drawing.Point(392, 188);
+            this.txt_ImparesPositivos.Name = "txt_ImparesPositivos";
+            this.txt_ImparesPositivos.ReadOnly = true;
+            this.txt_ImparesPositivos.Size = new System.Drawing.Size(100, 20);
+            this.txt_ImparesPositivos.TabIndex = 6;
             // 
             // txt_PorcentajeCeros
             // 
@@ -166,14 +168,15 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_PorcentajeCeros);
-            this.Controls.Add(this.txt_);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txt_ImparesPositivos);
+            this.Controls.Add(this.txt_MayorParPos);
             this.Controls.Add(this.txt_arreglo);
             this.Controls.Add(this.txt_ParesNeg);
             this.Controls.Add(this.lbl_Varreglo);
             this.Controls.Add(this.btn_Calcular);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Arreglos";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,8 +188,8 @@
         private System.Windows.Forms.Label lbl_Varreglo;
         private System.Windows.Forms.TextBox txt_ParesNeg;
         private System.Windows.Forms.TextBox txt_arreglo;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox txt_;
+        private System.Windows.Forms.TextBox txt_MayorParPos;
+        private System.Windows.Forms.TextBox txt_ImparesPositivos;
         private System.Windows.Forms.TextBox txt_PorcentajeCeros;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
